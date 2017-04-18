@@ -1,6 +1,7 @@
 package Application;
 
 import DataModel.DataTransactions;
+import Util.AlertBox;
 import Util.Transaction;
 import javafx.fxml.FXML;
 import javafx.collections.FXCollections;
@@ -93,6 +94,8 @@ public class Controller implements Initializable {
             statusLabel.setText("File not selected. Please try again.");
             statusLabel.setUnderline(true);
         } else {
+
+            AlertBox.display("loading", "The file is loading");
 
             tableViewData.clear();
             BufferedReader br = null;

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.CityGraph">
    <children>
       <PieChart fx:id="cityChart" prefHeight="600.0" prefWidth="800.0" title="City Transactions" HBox.hgrow="ALWAYS" />
+      <Button fx:id="saveButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleSave" text="Save" />
    </children>
 </HBox>
