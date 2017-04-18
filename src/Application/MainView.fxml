@@ -57,7 +57,7 @@
       </HBox>
       <Accordion>
         <panes>
-          <TitledPane expanded="false" text="Filters">
+          <TitledPane expanded="false" text="Options">
                <content>
                   <HBox spacing="10.0">
                      <children>
@@ -67,7 +67,7 @@
                            </HBox.margin>
                         </CheckBox>
                         <Region HBox.hgrow="ALWAYS" />
-                        <Button mnemonicParsing="false" text="Apply" />
+                        <Button fx:id="cityGraphBut" mnemonicParsing="false" onAction="#handleCityGraph" text="City Graph" />
                      </children>
                      <opaqueInsets>
                         <Insets />
