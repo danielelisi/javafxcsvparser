@@ -69,12 +69,12 @@ public class Controller implements Initializable {
         colDate.setCellValueFactory(new PropertyValueFactory<>("saleDate"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        itemList.getColumns().clear();
         itemList.setItems(tableViewData);
         itemList.getColumns().addAll(colStreet,colCity,colZip,colState,colBeds,colBaths,colFeet,colType,colDate,colPrice);
     }
 
     public void handleOpenFile() {
+
         FileChooser fc = new FileChooser();
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV", "*.csv"));
 
@@ -114,6 +114,7 @@ public class Controller implements Initializable {
                     transactionList.add(item);
 
                     //add Transaction item the GUI tableview
+                    itemList.getColumns().clear();
                     tableViewData.add(item);
                 }
 
