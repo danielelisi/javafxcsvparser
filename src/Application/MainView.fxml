@@ -42,7 +42,7 @@
       </MenuBar>
       <HBox prefHeight="40.0">
          <children>
-            <Label fx:id="statusLabel" text="Select a .csv file from the &lt;File&gt; menu" underline="true">
+            <Label fx:id="statusLabel" text="Select a .csv file from the &lt;File&gt; menu">
                <font>
                   <Font size="12.0" />
                </font>

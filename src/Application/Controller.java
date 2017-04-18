@@ -69,6 +69,7 @@ public class Controller implements Initializable {
         colDate.setCellValueFactory(new PropertyValueFactory<>("saleDate"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
 
+        itemList.getColumns().clear();
         itemList.setItems(tableViewData);
         itemList.getColumns().addAll(colStreet,colCity,colZip,colState,colBeds,colBaths,colFeet,colType,colDate,colPrice);
     }
@@ -82,8 +83,10 @@ public class Controller implements Initializable {
 
         if (selectedFile == null) {
             statusLabel.setText("File not selected. Please try again.");
+            statusLabel.setUnderline(true);
         } else {
 
+            tableViewData.clear();
             BufferedReader br = null;
             ArrayList<Transaction> transactionList;
 
@@ -114,7 +117,6 @@ public class Controller implements Initializable {
                     transactionList.add(item);
 
                     //add Transaction item the GUI tableview
-                    itemList.getColumns().clear();
                     tableViewData.add(item);
                 }
 
@@ -124,6 +126,8 @@ public class Controller implements Initializable {
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
+                statusLabel.setText("Click on the column to sort the data");
+                statusLabel.setUnderline(false);
                 try {
                     br.close();
                 } catch (IOException e) {
