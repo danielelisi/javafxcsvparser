@@ -9,10 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
@@ -27,7 +24,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class MainController implements Initializable {
 
 
     // GUI Elements initialization
@@ -35,6 +32,8 @@ public class Controller implements Initializable {
     private Label statusLabel;
     @FXML
     private Button cityGraphBut;
+    @FXML
+    private CheckBox checkboxFilter;
 
     // GUI Table and column initialization
     @FXML
